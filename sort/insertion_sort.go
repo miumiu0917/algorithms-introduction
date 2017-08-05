@@ -1,9 +1,7 @@
 package sort
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func InsertionSort() {
-	fmt.Println("insertion_sort")
+	fmt.Println("hello")
 }

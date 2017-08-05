@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	count := 100000
+	count := 1000000
 	set := make(map[int]struct{})
 	bar := pb.StartNew(count)
 	current := 0
