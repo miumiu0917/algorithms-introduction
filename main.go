@@ -10,8 +10,9 @@ import (
 )
 
 func main() {
-	sort.InsertionSort()
-	fmt.Println(len(readfile()))
+	list := readfile()
+	sort.InsertionSort(list)
+	writefile(list)
 }
 
 func readfile() []int {
@@ -23,4 +24,16 @@ func readfile() []int {
 		list = append(list, i)
 	}
 	return list
+}
+
+func writefile(list []int) {
+	file, err := os.Create("./data/output/sorted.txt")
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(0)
+	}
+	defer file.Close()
+	for _, e := range list {
+		file.Write(([]byte)(fmt.Sprintf("%08s\n", strconv.Itoa(e))))
+	}
 }
