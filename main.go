@@ -13,7 +13,8 @@ import (
 func main() {
 	list := readfile()
 	start := time.Now()
-	sort.InsertionSort(list)
+	list = []int{5, 2, 9, 1, 7, 8, 4, 3}
+	sort.MergeSort(list, 1, len(list))
 	end := time.Now()
 	writefile(list)
 	fmt.Printf("%f秒\n", (end.Sub(start)).Seconds())
