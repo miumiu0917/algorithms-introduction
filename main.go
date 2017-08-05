@@ -5,14 +5,18 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"time"
 
 	"./sort"
 )
 
 func main() {
 	list := readfile()
+	start := time.Now()
 	sort.InsertionSort(list)
+	end := time.Now()
 	writefile(list)
+	fmt.Printf("%f秒\n", (end.Sub(start)).Seconds())
 }
 
 func readfile() []int {
