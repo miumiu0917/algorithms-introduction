@@ -27,7 +27,7 @@ func readfile() []int {
 }
 
 func writefile(list []int) {
-	file, err := os.Create("./data/output/sorted.txt")
+	file, err := os.Create("./data/sorted.txt")
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(0)
