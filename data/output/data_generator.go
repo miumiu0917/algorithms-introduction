@@ -24,7 +24,7 @@ func main() {
 		}
 	}
 
-	file, err := os.Create("data/input.txt")
+	file, err := os.Create("./input.txt")
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(0)
