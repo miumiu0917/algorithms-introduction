@@ -41,7 +41,7 @@ func merge(list []int, p int, q int, r int) {
 	R = append(R, maxInt)
 	i := 0
 	j := 0
-	for k := p; k < r; k++ {
+	for k := p - 1; k < r; k++ {
 		if L[i] < R[j] {
 			list[k] = L[i]
 			i++
